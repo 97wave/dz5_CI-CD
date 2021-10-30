@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-LABEL maintainer="Alexander Ivanov <oz.sasha.ivanov@gmail.com>"
+LABEL maintainer="Alexander Ivanov <e97.wav@gmail.com>"
 
 # System envoriments
 ENV LANG=C.UTF-8 \
