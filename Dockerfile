@@ -6,7 +6,7 @@ LABEL maintainer="Evgeny Surin <e97.wave@gmail.com>"
 ENV LANG=C.UTF-8 \
   PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /stocks_products
 
 # Target requirements
 COPY requirements.txt .
