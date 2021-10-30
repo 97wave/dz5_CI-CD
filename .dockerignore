@@ -5,9 +5,9 @@
 
 # Allowed
 !apps/
-!assets/
+# !assets/
 !templates/
-!web_chat/
+!dz5_CI-CD/
 !manage.py
 !requirements.txt
 
