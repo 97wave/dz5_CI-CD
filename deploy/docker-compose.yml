@@ -3,6 +3,9 @@ version: '3.8'
 volumes:
   pgdata:
 
+networks:
+  private:
+
 services:
   db:
     image: postgres:alpine
@@ -11,8 +14,11 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data/
 
+    networks:
+      - private
+
   web:
-    image: artrey/web-chat:latest
+    image: 97wave/dz5_CI-CD:latest
     restart: unless-stopped
     depends_on:
       - db
@@ -21,6 +27,9 @@ services:
     volumes:
       - ./static:/app/static
       - ./media:/app/media
+
+    networks:
+      - private
 
   nginx:
     image: nginx:alpine
@@ -31,5 +40,7 @@ services:
       - ./media:/var/www/django/media:ro
     depends_on:
       - web
-    ports:
-      - 80:80
+    # ports:
+    #   - 80:80
+    networks:
+      - private
