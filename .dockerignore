@@ -4,10 +4,10 @@
 **
 
 # Allowed
-!apps/
+!logistic/
 !assets/
 !templates/
-!web_chat/
+!stocks_products/
 !manage.py
 !requirements.txt
 

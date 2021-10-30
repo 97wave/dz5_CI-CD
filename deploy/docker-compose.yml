@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 volumes:
   pgdata:
@@ -12,7 +12,7 @@ services:
     env_file:
       - .env
     volumes:
-      - pgdata:/var/lib/postgresql/data/
+      - pgdata:/var/lib/postgresql/data
 
     networks:
       - private
@@ -36,8 +36,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./static:/var/www/django/static:ro
-      - ./media:/var/www/django/media:ro
+      - ./static:/var/www/django/static:root
+      - ./media:/var/www/django/media:root
     depends_on:
       - web
     # ports:

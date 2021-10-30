@@ -1,6 +1,6 @@
-FROM python:3.9-slim
+FROM python:3.9
 
-LABEL maintainer="Alexander Ivanov <oz.sasha.ivanov@gmail.com>"
+LABEL maintainer="Evgeny Surin <e97.wave@gmail.com>"
 
 # System envoriments
 ENV LANG=C.UTF-8 \
@@ -20,4 +20,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["gunicorn", "web_chat.wsgi", "-w", "4", "-t", "600", "-b", "0.0.0.0:8000"]
+CMD ["gunicorn", "stocks_products.wsgi", "-w", "4", "-t", "600", "-b", "0.0.0.0:8000"]
