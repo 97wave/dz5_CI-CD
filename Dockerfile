@@ -20,4 +20,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["gunicorn", "web_chat.wsgi", "-w", "4", "-t", "600", "-b", "0.0.0.0:8000"]
+CMD ["gunicorn", "dz5_CI-CD.wsgi", "-w", "4", "-t", "600", "-b", "0.0.0.0:8000"]
