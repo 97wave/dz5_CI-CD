@@ -4,9 +4,9 @@
 **
 
 # Allowed
-!apps/
+!logistic/
 # !assets/
-!templates/
+# !templates/
 !dz5_CI-CD/
 !manage.py
 !requirements.txt
